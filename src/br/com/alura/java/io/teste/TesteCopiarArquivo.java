@@ -37,6 +37,5 @@ public class TesteCopiarArquivo {
 
         br.close();
         bw.close();
-        //bw.close();
     }
 }
