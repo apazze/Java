@@ -1,0 +1,19 @@
+package br.com.alura.java.io.teste;
+
+import java.io.*;
+
+public class TesteEscrita {
+    public static void main(String[] args) throws IOException {
+        OutputStream fos = new FileOutputStream("loremEscrita.txt");
+        Writer osw = new OutputStreamWriter(fos);
+        BufferedWriter bw = new BufferedWriter(osw);
+
+        bw.write("Teste de escrita no arquivo.");
+        bw.newLine();
+        bw.newLine();
+        bw.write("Teste de escrita bláblá.");
+
+
+        bw.close();
+    }
+}
