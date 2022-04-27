@@ -2,7 +2,7 @@ package br.com.alura.java.io.teste;
 
 import java.io.Serializable;
 
-public class Cliente implements Serializable {
+public class Clientes implements Serializable {
 
     //numero de versao da classe para fins de compatibilidade
     //se gerar um InvalidClassException significa que a classe sofreu alteracao e nao é possivel deserializar

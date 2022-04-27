@@ -14,9 +14,9 @@ public class TesteSerializacaoCliente {
         oos.close();*/
 
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("cliente.bin"));
-        Cliente cliente = (Cliente) ois.readObject();
+        Clientes clientes = (Clientes) ois.readObject();
         ois.close();
-        System.out.println(cliente.getNome() + cliente.getCpf() + cliente.getProfissao());
+        System.out.println(clientes.getNome() + clientes.getCpf() + clientes.getProfissao());
 
     }
 }
