@@ -1,15 +1,13 @@
 package br.com.alura.collections;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Curso {
     private String nome;
     private String instrutor;
     //Aqui usar sempre como interface!
     private List<Aula> aulas = new LinkedList<>();
+    private Set<Aluno> alunos = new HashSet<>();
 
     private int SomaTempo;
 
