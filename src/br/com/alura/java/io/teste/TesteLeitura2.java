@@ -9,7 +9,8 @@ public class TesteLeitura2 {
 
     public static void main(String[] args) throws Exception {
 
-        Scanner scanner = new Scanner(new File("contas.csv"));
+        // o segundo param charset é de qual encoding o arquivo foi gravado. i.e. se gravado no Mac OS, grava normalmente como UTF-8, se no windows, como windows-1252
+        Scanner scanner = new Scanner(new File("contas.csv"), "UTF-8");
 
 
         while (scanner.hasNextLine()) {

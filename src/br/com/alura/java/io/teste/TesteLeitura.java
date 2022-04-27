@@ -4,6 +4,8 @@ import java.io.*;
 
 public class TesteLeitura {
     public static void main(String[] args) throws IOException {
+
+        //posso passar um 2º argumento de charset, se a leitura de alguns caracteres for com ? significa q foi gravado com um encoding diferente do meu S.O.
         FileInputStream fis = new FileInputStream("lorem.txt");
         Reader isr = new InputStreamReader(fis);
         BufferedReader br = new BufferedReader(isr);
