@@ -1,5 +1,7 @@
 package br.com.alura.collections;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+
 import java.util.*;
 
 public class Curso {
@@ -53,5 +55,17 @@ public class Curso {
     @Override
     public String toString() {
         return "[ Curso: " + this.nome + ", tempo total: " + this.getTempoTotal() + ", aulas: " + this.aulas + " ]";
+    }
+
+    public void matricula(Aluno aluno) {
+        this.alunos.add(aluno);
+    }
+    //Set é a interface que implementa Collection!
+    public Set<Aluno> getAlunos() {
+        return Collections.unmodifiableSet(alunos);
+    }
+
+    public boolean estaMatriculado(Aluno aluno) {
+        return this.alunos.contains(aluno);
     }
 }
