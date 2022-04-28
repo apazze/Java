@@ -1,5 +1,8 @@
 package br.com.alura.collections;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
     public static void main(String[] args) {
 
@@ -22,6 +25,31 @@ public class TestaCursoComAluno {
         });
         System.out.println("O aluno " + a1 + " está matriculado?");
         System.out.println(javaColecoes.estaMatriculado(a1));
+
+        Aluno turini = new Aluno("Rodrigo Turini", 2467852);
+        System.out.println("E esse turini, está matriculado?");
+        System.out.println(javaColecoes.estaMatriculado(turini));
+
+        System.out.println("O a1 é equals ao Turini?");
+        System.out.println(a1.equals(turini));
+
+        //obrigatoriamente o seguinte é true:
+
+        System.out.println(a1.hashCode() == turini.hashCode());
+       /* System.out.println("Iterando lista de Alunos:");
+        for (Aluno item:javaColecoes.getAlunos()) {
+            System.out.println(item);
+        }*/
+
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        System.out.println("Iterando lista de Alunos com Iterator:");
+        while (iterador.hasNext()){
+            Aluno proximo = iterador.next();
+            System.out.println(proximo);
+        }
+
+
 
     }
 
