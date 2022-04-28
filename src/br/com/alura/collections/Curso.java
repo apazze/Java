@@ -11,6 +11,8 @@ public class Curso {
     private List<Aula> aulas = new LinkedList<>();
     private Set<Aluno> alunos = new HashSet<>();
 
+    private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
+
     private int SomaTempo;
 
     public List<Aula> getAulas() {
@@ -59,7 +61,13 @@ public class Curso {
 
     public void matricula(Aluno aluno) {
         this.alunos.add(aluno);
+        //Map - 'tabela no excel' com chave - valor
+        this.matriculaParaAluno.put(aluno.getNumeroMatricula(), aluno);
     }
+
+
+
+
     //Set é a interface que implementa Collection!
     public Set<Aluno> getAlunos() {
         return Collections.unmodifiableSet(alunos);
@@ -67,5 +75,22 @@ public class Curso {
 
     public boolean estaMatriculado(Aluno aluno) {
         return this.alunos.contains(aluno);
+    }
+
+
+    public Aluno buscaMatricula(int numero) {
+
+        //Sem Map:
+        /*for (Aluno item:alunos) {
+            if(item.getNumeroMatricula() == numero)
+                return item;
+        }*/
+
+        //throw new NoSuchElementException("matricula não encontrada: " + numero);
+
+        //com Map:
+        if(!matriculaParaAluno.containsKey(numero))
+            throw new NoSuchElementException("matricula não encontrada: " + numero);
+        return matriculaParaAluno.get(numero);
     }
 }

@@ -14,5 +14,8 @@ public class QualColecaoUsar {
         alunos.remove();
         alunos.size();*/
 
+        /*A implementação TreeSet já ordena os seus elementos na hora da inserção.
+        Qual é o critério da ordenação depende e pode ser definido através de um Comparator.*/
+
     }
 }
