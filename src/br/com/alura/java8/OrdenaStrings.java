@@ -40,7 +40,10 @@ class OrdenaStrings {
         palavras.sort(Comparator.comparingInt(String::length));
 
         System.out.println("Após ordenar com sort pela qtd de cars:");
-        palavras.forEach(p -> System.out.println(p));
+        //palavras.forEach(p -> System.out.println(p));
+
+        //usando method reference:
+        palavras.forEach(System.out::println);
 
         /*new Thread(new Runnable() {
 
