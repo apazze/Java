@@ -11,6 +11,7 @@ public class Curso {
     private List<Aula> aulas = new LinkedList<>();
     private Set<Aluno> alunos = new HashSet<>();
 
+    //O LinkedHashMap continua nos dando a performance de um HashMap, mas com acesso previsível e ordenado, seguindo a inserção dos seus elementos.
     private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
 
     private int SomaTempo;

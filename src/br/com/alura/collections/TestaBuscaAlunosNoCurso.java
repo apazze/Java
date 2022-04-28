@@ -1,5 +1,6 @@
 package br.com.alura.collections;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -31,6 +32,23 @@ public class TestaBuscaAlunosNoCurso {
 
         //Se eu quiser uma matricula para varios alunos:
         //Map<Integer, Set<Aluno>> matriculaParaAlunos;
+
+
+        Map<String, Integer> nomesParaIdade = new HashMap<>();
+        nomesParaIdade.put("Paulo", 31);
+        nomesParaIdade.put("Adriano", 25);
+        nomesParaIdade.put("Alberto", 33);
+        nomesParaIdade.put("Guilherme", 26);
+
+        System.out.println("Chaves:");
+        for (String item:nomesParaIdade.keySet()) {
+            System.out.println(item);
+        }
+
+        System.out.println("Valores:");
+        for (int item:nomesParaIdade.values()) {
+            System.out.println(item);
+        }
 
 
     }
